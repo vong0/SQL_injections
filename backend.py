@@ -14,19 +14,22 @@ def db_rollback() -> str:
 def run_query(course: str) -> list:
     # Build query
     query = """
-    SELECT      code, uoc, offering
-    FROM        subject_summary
+    SELECT code, uoc, offering
+    FROM subject_summary
     WHERE       code ILIKE '%{}%'
     """.format(course)
+
+    # Print query (for debugging)
     query = cur.mogrify(query)
+    print(query.decode("utf-8"))
 
     # Execute query
     cur.execute(query)
-    print(query.decode("utf-8"))
 
     # Fetch results
     return list(cur.fetchall())
 
 if __name__ == "__main__":
+    # For debugging
     l = run_query('comp')
     print(l)
