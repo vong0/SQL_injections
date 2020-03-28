@@ -1,0 +1,65 @@
+/* --------Body styles-------- */
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Gives spacing for header */
+body main {
+    padding: 5em 1em 1em 1em;
+}
+
+/* --------Header styles-------- */
+header {
+    background: #3575d3;
+    width: 100%;
+    top: 0;
+    position: fixed;
+}
+
+/* Header size*/
+header div {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1em 0 1em;
+}
+
+/* Company Name */
+header h1 {
+    float: left;
+    color: white;
+}
+
+/* --------Table styles-------- */
+/* Table borders close together */
+table {
+    border-collapse: collapse;
+}
+
+/* Table in centre page */
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Color, spacing and alignment table headers */
+table th {
+    text-align: left;
+    background-color: #3a6070;
+    color: #FFF;
+    padding: 4px 30px 4px 8px;
+}
+
+/* Border size and spacing for columns */
+table td {
+    text-align: left;
+    border: 1px solid #e3e3e3;
+    padding: 4px 8px;
+}
+
+/* Alternating colors for rows */
+table tr:nth-child(odd) td {
+    background-color: #e7edf0;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <title>UNSW: Course Finder</title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    </head>
+
+    <body>
+        <header>
+            <div>
+                <li><a href="{{ url_for('home') }}"><h1>UNSW: Course Finder</h1></a></li>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <br>
+                <h2><u>Course Finder</u></h2>
+                <form method="POST">
+                    Search:
+                    {% if form %}
+                        <input size="40" name = "query" value={{form.get('query')}}>
+                    {% else %}
+                        <input size="40" name = "query" value=''>
+                    {% endif %}
+                    <button type="submit" name ="search_button" value="search">Submit</button>
+                </form>
+
+            <!-- Result table -->
+            {% block body %}{% endblock %}
+        </main>
+    </body>
+</html>

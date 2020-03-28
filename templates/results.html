@@ -1,0 +1,27 @@
+{% extends 'home.html' %}
+
+{% block body %}
+    <!-- Course results table -->
+    <br><br><br>
+    {% if results is not none %}
+        <h2><u>Results</u></h2>
+        Results found: {{results|length}}
+        <table class = "center">
+            <tr>
+                <th>Course</th>
+                <th>UOC</th>
+                <th>Terms offered</th>
+            </tr>
+            {% for x in results %}
+                <tr>
+                    <td>{{x[0]}}</td>
+                    <td>{{x[1]}}</td>
+                    <td>{{x[2]}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% elif errors %}
+        <h2> Results </h2>
+        <h3> {{errors}} </h3>
+    {% endif %}
+{% endblock %}
