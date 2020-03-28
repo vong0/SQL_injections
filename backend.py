@@ -18,10 +18,11 @@ def run_query(course: str) -> list:
     FROM        subject_summary
     WHERE       code ILIKE '%{}%'
     """.format(course)
+    query = cur.mogrify(query)
 
     # Execute query
-    print(query)
     cur.execute(query)
+    print(query.decode("utf-8"))
 
     # Fetch results
     return list(cur.fetchall())
