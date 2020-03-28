@@ -20,6 +20,7 @@ def run_query(course: str) -> list:
     """.format(course)
 
     # Execute query
+    print(query)
     cur.execute(query)
 
     # Fetch results
