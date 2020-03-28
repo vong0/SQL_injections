@@ -7,3 +7,8 @@ JOIN        Courses c ON s.id = c.subject_id
 JOIN        Terms t on t.id = c.term_id
 GROUP BY    s.code, s.uoc
 ;
+
+
+UPDATE      people
+SET         password = concat('password', id);
+;
