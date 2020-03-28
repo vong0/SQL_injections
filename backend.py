@@ -16,11 +16,11 @@ def run_query(course: str) -> list:
     query = """
     SELECT code, uoc, offering
     FROM subject_summary
-    WHERE       code ILIKE '%{}%'
-    """.format(course)
+    WHERE       code ILIKE %s
+    """
 
     # Print query (for debugging)
-    query = cur.mogrify(query)
+    query = cur.mogrify(query, ['%' + course + '%'])
     print(query.decode("utf-8"))
 
     # Execute query
