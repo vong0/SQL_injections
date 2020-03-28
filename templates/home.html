@@ -19,8 +19,8 @@
                 <h2><u>Course Finder</u></h2>
                 <form method="POST">
                     Search:
-                    {% if form %}
-                        <input size="40" name = "query" value={{form.get('query')}}>
+                    {% if query %}
+                        <input size="40" name = "query" value="{{query}}">
                     {% else %}
                         <input size="40" name = "query" value=''>
                     {% endif %}

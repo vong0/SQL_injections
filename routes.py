@@ -8,14 +8,13 @@ app = Flask(__name__)
 def home():
     results = None
     errors = None
-    form = None
+    query = None
 
     # Run query for courses
     if request.method == 'POST':
-        form = request.form
+        query = request.form['query']
         try:
-            results = run_query(form['query'])
+            results = run_query(query)
         except Exception:
             errors = db_rollback()
-
-    return render_template('results.html', results=results, errors=errors, form=form)
+    return render_template('results.html', results=results, errors=errors, query=query)
