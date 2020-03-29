@@ -14,5 +14,5 @@ There are 2 main branches:
 - stop_sql_injections: contains a fix to prevent SQL injections
 
 This application was used in the following videos:
-- [SQL Injections - part 1](https://www.youtube.com/channel/UCNCJv_6ohdTcQXm8YkxTj9g)
-- [SQL Injections - part 2](https://www.youtube.com/channel/UCNCJv_6ohdTcQXm8YkxTj9g)
+- [SQL Injections - part 1](https://youtu.be/U9Mf6ciKwyE)
+- [SQL Injections - part 2](https://youtu.be/3DwlYd7GqE8)
