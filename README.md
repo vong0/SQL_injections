@@ -27,3 +27,14 @@ python3 run.py
 # run server resistant to sql injections
 python3 run.py --user-safe
 ```
+
+## Inspecting Database
+```bash
+# list all databases
+psql -l
+
+# enter our database
+psql unsw
+\d          # list tables
+\d people   # list schema of 'people' table
+```
