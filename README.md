@@ -37,4 +37,5 @@ psql -l
 psql unsw
 \d          # list tables
 \d people   # list schema of 'people' table
+\q          # exit out of psql shell
 ```
