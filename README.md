@@ -25,7 +25,10 @@ python3 -m pip install psycopg2-binary flask
 python3 run.py
 
 # run server resistant to sql injections
-python3 run.py --user-safe
+python3 run.py --use-safe
+
+# a walkthrough of the thought process of running sql 
+# injections can be found in the inject.sql file
 ```
 
 ## Inspecting Database
